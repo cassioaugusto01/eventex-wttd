@@ -11,3 +11,8 @@ class HomeTest(TestCase):
     def test_template(self):
         """Must use index.html"""
         self.assertTemplateUsed(self.response, 'index.html')
+        
+    def test_subscription_email_body(self):
+        contents = [
+            'Henrique Bastos',
+            '12345678901',]
