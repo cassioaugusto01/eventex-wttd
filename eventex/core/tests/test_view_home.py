@@ -12,7 +12,5 @@ class HomeTest(TestCase):
         """Must use index.html"""
         self.assertTemplateUsed(self.response, 'index.html')
         
-    def test_subscription_email_body(self):
-        contents = [
-            'Henrique Bastos',
-            '12345678901',]
+    def test_subscription_link(self):
+        self.assertContains(self.response, 'href="/inscricao/"')

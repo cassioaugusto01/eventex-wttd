@@ -2,7 +2,7 @@ from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
 import django.core.mail as mail
 
-class SubscribeTest(TestCase):
+class SubscribeGet(TestCase):
     def setUp(self):
         self.resp = self.client.get('/inscricao/')
         
@@ -34,7 +34,7 @@ class SubscribeTest(TestCase):
         form = self.resp.context['form']
         self.assertSequenceEqual(['name', 'cpf', 'email', 'phone'], list(form.fields))
         
-class subscribePostTest(TestCase):
+class subscribePostValid(TestCase):
     def setUp(self):
         data = dict(name='Henrique Bastos', cpf='12345678901',
                     email='henrique@bastos.net', phone='21999999999')
@@ -60,7 +60,7 @@ class subscribePostTest(TestCase):
         email = mail.outbox[0]
         expect = ['contato@eventex.com.br']
         
-class SubscribeInvalidPost(TestCase):
+class SubscribePostInvalid(TestCase):
     def setUp(self):
         self.resp = self.client.post('/inscricao/', {})
         
@@ -80,3 +80,4 @@ class SubscribeInvalidPost(TestCase):
         self.assertTrue(form.errors)
         
     #def test_subs
+    
