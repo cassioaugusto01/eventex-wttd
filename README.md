@@ -2,6 +2,8 @@
 
 Sistema de eventos
 
+[![Build Status](https://app.travis-ci.com/cassioaugusto01/eventex-wttd.svg?token=jCNGJxKVp2nYgtQwMxNn&branch=main)](https://app.travis-ci.com/cassioaugusto01/eventex-wttd)
+
 ## Como desenvolver
 
 1. Clone o repositorio
