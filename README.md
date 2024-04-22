@@ -12,7 +12,7 @@ Sistema de eventos
 6. execute os testes
 
 '''console
-git clone git@github.com:henriquebastos/eventex.git wttd
+git clone git@github.com:cassioaugusto01/eventex-wttd.git wttd
 cd wttd
 python -m venv .wttd
 source .wttd/bin/activate
